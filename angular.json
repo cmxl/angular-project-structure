@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "dragsidropsi": {
+    "angularprojectstructure": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -41,7 +41,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/dragsidropsi",
+            "outputPath": "dist/angularprojectstructure",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -52,7 +52,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles/styles.scss"
+              "src/styles/styles.scss",
+              "node_modules/bulma/css/bulma.css"
             ],
             "scripts": []
           },
@@ -93,10 +94,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "dragsidropsi:build:production"
+              "browserTarget": "angularprojectstructure:build:production"
             },
             "development": {
-              "browserTarget": "dragsidropsi:build:development"
+              "browserTarget": "angularprojectstructure:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -104,11 +105,11 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "dragsidropsi:build"
+            "browserTarget": "angularprojectstructure:build"
           }
         }
       }
     }
   },
-  "defaultProject": "dragsidropsi"
+  "defaultProject": "angularprojectstructure"
 }
