@@ -1,0 +1,17 @@
+body {
+    background: #404040;
+    color: whitesmoke;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body,
+noobit-root { 
+    margin: 0;
+    height: 100vh;
+    display: flex; 
+    flex-direction: column; 
+}
+
+p {
+    text-align: justify;
+}

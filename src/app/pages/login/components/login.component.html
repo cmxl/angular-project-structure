@@ -1,0 +1,27 @@
+<h1>Login</h1>
+
+<hr />
+
+<form [formGroup]="loginForm">
+    <div>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" formControlName="username" />
+    </div>
+    <div>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" formControlName="password" />
+    </div>
+    <div>
+        <button type="submit" [disabled]="this.loginForm.invalid" (click)="login()">Login</button>
+    </div>
+</form>
+
+<hr />
+<br />
+<ng-container *ngIf="username$ | async as username; then loggedIn; else loggingIn"></ng-container>
+<ng-template #loggedIn let-username>
+    <span>{{ username }} successfully logged in!</span>
+</ng-template>
+<ng-template #loggingIn>
+    <span>Please login!</span>
+</ng-template>
